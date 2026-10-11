@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>NOVA · Training</title>
+    <title>NOVA · Swim</title>
 
     <link
         rel="stylesheet"
@@ -202,13 +202,13 @@
                  01 · NOVA TRAINING
             ================================================== -->
 
-            <section
+<section
                 class="nova-training-hero"
                 aria-labelledby="trainingTitle"
             >
 
                 <div class="nova-section-eyebrow">
-                    NOVA · TRAINING
+                    NOVA · SWIM
                 </div>
 
                 <h1
@@ -267,6 +267,7 @@
             </section>
 
 
+
             <!-- =================================================
                  02 · TRAINING NAVIGATION
             ================================================== -->
@@ -279,7 +280,7 @@
                 <div class="nova-training-navigation-header">
 
                     <div class="nova-section-eyebrow">
-                        NOVA · TRAINING
+                        NOVA · SWIM
                     </div>
 
                     <h2
@@ -429,7 +430,7 @@
                         <div class="nova-training-card-content">
 
                             <span class="nova-training-card-label">
-                                ELIGE TU DISCIPLINA
+                                ELIGE TU PRÓXIMO ENTRENAMIENTO
                             </span>
 
                             <h3>
@@ -483,7 +484,7 @@
                             </span>
 
                             <h3>
-                                MEMBRESÍAS
+                                PLAN
                             </h3>
 
                             <p>
@@ -582,7 +583,7 @@
                 </a>
 
                 <p>
-                    TRAINING
+                    SWIM
                 </p>
 
                 <span>
@@ -683,7 +684,7 @@
                     href="#novaTrainingDirection"
                     class="js-open-training-direction"
                 >
-                    NOVA Training
+                    NOVA Swim
                 </a>
 
                 <a
@@ -787,7 +788,7 @@
             </span>
 
             <span>
-                NOVA · TRAINING
+                NOVA · SWIM
             </span>
 
         </div>
@@ -1286,401 +1287,554 @@
 
                 const coachHTML = `
 
-                    <div class="nova-modal-eyebrow">
-                        NOVA · TRAINING
-                    </div>
+    <div class="nova-modal-eyebrow">
+        NOVA · SWIM
+    </div>
 
 
-                    <div class="nova-coach-modal-profile">
+    <div class="nova-coach-modal-profile">
 
-                        <div class="nova-coach-modal-image">
+        <div class="nova-coach-modal-image">
 
-                            <img
-                                src="img/HAPPY 11.jpeg"
-                                alt="Alan Aguilar"
-                            >
+            <div class="nova-coach-carousel" data-coach-carousel>
 
-                        </div>
+                <button
+                    type="button"
+                    class="nova-coach-carousel-arrow nova-coach-carousel-prev"
+                    aria-label="Foto anterior"
+                >
+                    &#10094;
+                </button>
 
-                    </div>
+                <div class="nova-coach-carousel-track">
 
-
-                    <div class="nova-modal-text">
-
-                        <p>
-                            NOVA nace desde una forma de entender el
-                            entrenamiento: conocer dónde estás, entender
-                            qué quieres conseguir y construir el trabajo
-                            necesario para avanzar.
-                        </p>
-
-                        <p>
-                            El entrenamiento se desarrolla alrededor de
-                            cada proceso, buscando que cada sesión tenga
-                            una intención clara y que el trabajo pueda
-                            evolucionar contigo.
-                        </p>
-
-                    </div>
-
-
-                    <div class="nova-modal-list">
-
-                        <div class="nova-modal-list-item">
-
-                            <span>
-                                01
-                            </span>
-
-                            <strong>
-                                ADAPTACIÓN ACUÁTICA
-                            </strong>
-
-                        </div>
-
-
-                        <div class="nova-modal-text">
-
-                            <p>
-                                Técnica, resistencia, ritmo y eficiencia
-                                para construir una mejor capacidad dentro
-                                del agua.
-                            </p>
-
-                        </div>
-
-
-                        <div class="nova-modal-list-item">
-
-                            <span>
-                                02
-                            </span>
-
-                            <strong>
-                                ESTRATEGIA
-                            </strong>
-
-                        </div>
-
-
-                        <div class="nova-modal-text">
-
-                            <p>
-                                Preparación para las condiciones que cambian
-                                fuera de la piscina: distancia, orientación,
-                                ritmo, respiración y adaptación al entorno.
-                            </p>
-
-                        </div>
-
-
-                        <div class="nova-modal-list-item">
-
-                            <span>
-                                03
-                            </span>
-
-                            <strong>
-                                ACONDICIONAMIENTO
-                            </strong>
-
-                        </div>
-
-
-                        <div class="nova-modal-text">
-
-                            <p>
-                                Desarrollo de fuerza, estabilidad, capacidad
-                                física y control para complementar el
-                                rendimiento dentro y fuera del agua.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="nova-modal-text">
-
-                        <h3>
-                            Su forma de trabajar
-                        </h3>
-
-                        <p>
-                            Analizar, planificar, entrenar y ajustar.
-                            El objetivo no es simplemente acumular sesiones,
-                            sino construir un proceso que tenga sentido
-                            para la persona que está entrenando.
-                        </p>
-
-                    </div>
-
-
-                    <div class="nova-modal-text">
-
-                        <h3>
-                            Su enfoque de entrenamiento
-                        </h3>
-
-                        <p>
-                            El trabajo combina estructura, intención y
-                            seguimiento para desarrollar capacidad,
-                            técnica y rendimiento de manera progresiva.
-                        </p>
-
-                    </div>
-
-
-                    <a
-                        href="https://wa.me/525612584271?text=${encodeURIComponent(
-                            "Hola Alan, quiero conocer más sobre NOVA Training y el entrenamiento."
-                        )}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="nova-modal-action"
+                    <img
+                        class="nova-coach-carousel-slide is-active"
+                        src="img/HAPPY 11.jpeg"
+                        alt="Alan Aguilar"
                     >
-                        HABLAR CON ALAN
-                        <span aria-hidden="true">
-                            →
-                        </span>
-                    </a>
 
-                `;
+                    <img
+                        class="nova-coach-carousel-slide"
+                        src="img/Presentacion.jpeg"
+                        alt="Alan Aguilar, fotografía 2"
+                    >
+                </div>
 
+                <button
+                    type="button"
+                    class="nova-coach-carousel-arrow nova-coach-carousel-next"
+                    aria-label="Foto siguiente"
+                >
+                    &#10095;
+                </button>
 
-                document
-                    .querySelectorAll(
-                        ".js-open-coach"
-                    )
-                    .forEach(
-                        function (link) {
+                <div class="nova-coach-carousel-dots"></div>
 
-                            link.addEventListener(
-                                "click",
-                                function (event) {
+            </div>
 
-                                    event.preventDefault();
+        </div>
 
-                                    closeMenu();
+    </div>
 
-                                    openModal(
-                                        coachHTML
-                                    );
 
-                                }
-                            );
+    <div class="nova-modal-text">
 
-                        }
-                    );
+        <p>
+            NOVA nace desde una forma de entender el
+            entrenamiento: conocer dónde estás, entender
+            qué quieres conseguir y construir el trabajo
+            necesario para avanzar.
+        </p>
 
+        <p>
+            El entrenamiento se desarrolla alrededor de
+            cada proceso, buscando que cada sesión tenga
+            una intención clara y que el trabajo pueda
+            evolucionar contigo.
+        </p>
 
-                /* =================================================
-                   ENTRENA CON DIRECCIÓN
-                ================================================== */
+    </div>
 
-                const trainingDirectionHTML = `
 
-                    <div class="nova-modal-eyebrow">
-                        NOVA · TRAINING
-                    </div>
+    <div class="nova-modal-list">
 
+        <div class="nova-modal-list-item">
 
-                    <h2 id="novaModalTitle">
-                        Entrena con<br>
-                        dirección.
-                    </h2>
+            <span>
+                01
+            </span>
 
+            <strong>
+                ADAPTACIÓN ACUÁTICA
+            </strong>
 
-                    <div class="nova-modal-text">
+        </div>
 
-                        <p>
-                            Entrenar no es solamente completar sesiones.
-                            Cada entrenamiento debe formar parte de una
-                            estructura que tenga un propósito.
-                        </p>
 
-                    </div>
+        <div class="nova-modal-text">
 
+            <p>
+                Técnica, resistencia, ritmo y eficiencia
+                para construir una mejor capacidad dentro
+                del agua.
+            </p>
 
-                    <div class="nova-modal-list">
+        </div>
 
-                        <div class="nova-modal-list-item">
 
-                            <span>
-                                01
-                            </span>
+        <div class="nova-modal-list-item">
 
-                            <strong>
-                                PROGRAMACIÓN
-                            </strong>
+            <span>
+                02
+            </span>
 
-                        </div>
+            <strong>
+                ESTRATEGIA
+            </strong>
 
+        </div>
 
-                        <div class="nova-modal-text">
 
-                            <h3>
-                                Nuevos entrenamientos cada semana
-                            </h3>
+        <div class="nova-modal-text">
 
-                            <p>
-                                Una variedad de sesiones y estructuras para
-                                seguir construyendo capacidad, técnica y
-                                rendimiento.
-                            </p>
+            <p>
+                Preparación para las condiciones que cambian
+                fuera de la piscina: distancia, orientación,
+                ritmo, respiración y adaptación al entorno.
+            </p>
 
-                        </div>
+        </div>
 
 
-                        <div class="nova-modal-list-item">
+        <div class="nova-modal-list-item">
 
-                            <span>
-                                02
-                            </span>
+            <span>
+                03
+            </span>
 
-                            <strong>
-                                ESTRUCTURA
-                            </strong>
+            <strong>
+                ACONDICIONAMIENTO
+            </strong>
 
-                        </div>
+        </div>
 
 
-                        <div class="nova-modal-text">
+        <div class="nova-modal-text">
 
-                            <h3>
-                                Sabe qué entrenar
-                            </h3>
+            <p>
+                Desarrollo de fuerza, estabilidad, capacidad
+                física y control para complementar el
+                rendimiento dentro y fuera del agua.
+            </p>
 
-                            <p>
-                                Cada sesión tiene un propósito y forma parte
-                                de una estructura pensada para avanzar.
-                            </p>
+        </div>
 
-                        </div>
+    </div>
 
 
-                        <div class="nova-modal-list-item">
+    <div class="nova-modal-text">
 
-                            <span>
-                                03
-                            </span>
+        <h3>
+            Su forma de trabajar
+        </h3>
 
-                            <strong>
-                                COACHING
-                            </strong>
+        <p>
+            Analizar, planificar, entrenar y ajustar.
+            El objetivo no es simplemente acumular sesiones,
+            sino construir un proceso que tenga sentido
+            para la persona que está entrenando.
+        </p>
 
-                        </div>
+    </div>
 
 
-                        <div class="nova-modal-text">
+    <div class="nova-modal-text">
 
-                            <h3>
-                                Entrena con dirección
-                            </h3>
+        <h3>
+            Su enfoque de entrenamiento
+        </h3>
 
-                            <p>
-                                Una metodología construida alrededor de tu
-                                nivel, tus objetivos y tu proceso.
-                            </p>
+        <p>
+            El trabajo combina estructura, intención y
+            seguimiento para desarrollar capacidad,
+            técnica y rendimiento de manera progresiva.
+        </p>
 
-                        </div>
+    </div>
 
 
-                        <div class="nova-modal-list-item">
+    <a
+        href="https://wa.me/525612584271?text=${encodeURIComponent(
+            "Hola Alan, quiero conocer más sobre NOVA SWIM y el entrenamiento."
+        )}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nova-modal-action"
+    >
+        HABLAR CON ALAN
+        <span aria-hidden="true">
+            →
+        </span>
+    </a>
 
-                            <span>
-                                04
-                            </span>
+`;
 
-                            <strong>
-                                EVOLUCIÓN
-                            </strong>
 
-                        </div>
+// =====================================================
+// FUNCIONAMIENTO DEL CARRUSEL DEL COACH
+// =====================================================
 
+function initCoachCarousel() {
 
-                        <div class="nova-modal-text">
+    document
+        .querySelectorAll("[data-coach-carousel]")
+        .forEach(function (carousel) {
 
-                            <h3>
-                                Tu entrenamiento cambia contigo
-                            </h3>
+            if (carousel.dataset.initialized === "true") {
+                return;
+            }
 
-                            <p>
-                                El trabajo puede ajustarse conforme cambian
-                                tu capacidad, experiencia y objetivos.
-                            </p>
+            carousel.dataset.initialized = "true";
 
-                        </div>
+            const slides = Array.from(
+                carousel.querySelectorAll(
+                    ".nova-coach-carousel-slide"
+                )
+            );
 
-                    </div>
+            const prev = carousel.querySelector(
+                ".nova-coach-carousel-prev"
+            );
 
+            const next = carousel.querySelector(
+                ".nova-coach-carousel-next"
+            );
 
-                    <div class="nova-modal-footer-action">
+            const dotsContainer = carousel.querySelector(
+                ".nova-coach-carousel-dots"
+            );
 
-                        <button
-                            type="button"
-                            class="nova-modal-action js-open-disciplines-from-training"
-                        >
-                            CONOCE LAS DISCIPLINAS
+            if (
+                !slides.length ||
+                !prev ||
+                !next ||
+                !dotsContainer
+            ) {
+                return;
+            }
 
-                            <span aria-hidden="true">
-                                →
-                            </span>
+            let current = 0;
 
-                        </button>
+            slides.forEach(function (_, index) {
 
-                    </div>
+                const dot = document.createElement("button");
 
-                `;
+                dot.type = "button";
 
+                dot.className = "nova-coach-carousel-dot";
 
-                document
-                    .querySelectorAll(
-                        ".js-open-training-direction"
-                    )
-                    .forEach(
-                        function (link) {
-
-                            link.addEventListener(
-                                "click",
-                                function (event) {
-
-                                    event.preventDefault();
-
-                                    closeMenu();
-
-                                    openModal(
-                                        trainingDirectionHTML
-                                    );
-
-                                }
-                            );
-
-                        }
-                    );
-
-
-                document.addEventListener(
-                    "click",
-                    function (event) {
-
-                        const disciplinesButton =
-                            event.target.closest(
-                                ".js-open-disciplines-from-training"
-                            );
-
-
-                        if (!disciplinesButton) {
-                            return;
-                        }
-
-
-                        openModal(
-                            disciplinesHTML
-                        );
-
-                    }
+                dot.setAttribute(
+                    "aria-label",
+                    "Mostrar fotografía " + (index + 1)
                 );
+
+                dot.addEventListener("click", function () {
+                    showSlide(index);
+                });
+
+                dotsContainer.appendChild(dot);
+
+            });
+
+            const dots = Array.from(
+                dotsContainer.querySelectorAll("button")
+            );
+
+            function showSlide(index) {
+
+                current =
+                    (index + slides.length) % slides.length;
+
+                slides.forEach(function (slide, i) {
+
+                    slide.classList.toggle(
+                        "is-active",
+                        i === current
+                    );
+
+                    slide.setAttribute(
+                        "aria-hidden",
+                        i === current ? "false" : "true"
+                    );
+
+                });
+
+                dots.forEach(function (dot, i) {
+
+                    dot.classList.toggle(
+                        "is-active",
+                        i === current
+                    );
+
+                    if (i === current) {
+                        dot.setAttribute(
+                            "aria-current",
+                            "true"
+                        );
+                    } else {
+                        dot.removeAttribute("aria-current");
+                    }
+
+                });
+
+            }
+
+            prev.addEventListener("click", function () {
+                showSlide(current - 1);
+            });
+
+            next.addEventListener("click", function () {
+                showSlide(current + 1);
+            });
+
+            showSlide(0);
+
+        });
+
+}
+
+
+// =====================================================
+// APERTURA DEL MODAL DEL COACH
+// =====================================================
+
+document
+    .querySelectorAll(".js-open-coach")
+    .forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            closeMenu();
+
+            openModal(coachHTML);
+
+            requestAnimationFrame(function () {
+                initCoachCarousel();
+            });
+
+        });
+
+    });
+
+
+/* =================================================
+   ENTRENA CON DIRECCIÓN
+================================================== */
+
+const trainingDirectionHTML = `
+
+    <div class="nova-modal-eyebrow">
+        NOVA · SWIM
+    </div>
+
+
+    <h2 id="novaModalTitle">
+        Entrena con<br>
+        dirección.
+    </h2>
+
+
+    <div class="nova-modal-text">
+
+        <p>
+            Entrenar no es solamente completar sesiones.
+            Cada entrenamiento debe formar parte de una
+            estructura que tenga un propósito.
+        </p>
+
+    </div>
+
+
+    <div class="nova-modal-list">
+
+        <div class="nova-modal-list-item">
+
+            <span>
+                01
+            </span>
+
+            <strong>
+                PROGRAMACIÓN
+            </strong>
+
+        </div>
+
+
+        <div class="nova-modal-text">
+
+            <h3>
+                Nuevos entrenamientos cada semana
+            </h3>
+
+            <p>
+                Una variedad de sesiones y estructuras para
+                seguir construyendo capacidad, técnica y
+                rendimiento.
+            </p>
+
+        </div>
+
+
+        <div class="nova-modal-list-item">
+
+            <span>
+                02
+            </span>
+
+            <strong>
+                ESTRUCTURA
+            </strong>
+
+        </div>
+
+
+        <div class="nova-modal-text">
+
+            <h3>
+                Sabe qué entrenar
+            </h3>
+
+            <p>
+                Cada sesión tiene un propósito y forma parte
+                de una estructura pensada para avanzar.
+            </p>
+
+        </div>
+
+
+        <div class="nova-modal-list-item">
+
+            <span>
+                03
+            </span>
+
+            <strong>
+                COACHING
+            </strong>
+
+        </div>
+
+
+        <div class="nova-modal-text">
+
+            <h3>
+                Entrena con dirección
+            </h3>
+
+            <p>
+                Una metodología construida alrededor de tu
+                nivel, tus objetivos y tu proceso.
+            </p>
+
+        </div>
+
+
+        <div class="nova-modal-list-item">
+
+            <span>
+                04
+            </span>
+
+            <strong>
+                EVOLUCIÓN
+            </strong>
+
+        </div>
+
+
+        <div class="nova-modal-text">
+
+            <h3>
+                Tu entrenamiento cambia contigo
+            </h3>
+
+            <p>
+                El trabajo puede ajustarse conforme cambian
+                tu capacidad, experiencia y objetivos.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="nova-modal-footer-action">
+
+        <video
+            class="nova-coach-carousel-slide"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Video de entrenamiento 1"
+        >
+            <source
+                src="img/Entrenamiento.mp4"
+                type="video/mp4"
+            >
+            Tu navegador no puede reproducir este video.
+        </video>
+
+
+        <video
+            class="nova-coach-carousel-slide"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Video de entrenamiento 2"
+        >
+            <source
+                src="img/Entrenamiento2.mp4"
+                type="video/mp4"
+            >
+            Tu navegador no puede reproducir este video.
+        </video>
+
+    </div>
+
+`;
+
+
+document
+    .querySelectorAll(
+        ".js-open-training-direction"
+    )
+    .forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    closeMenu();
+
+                    openModal(
+                        trainingDirectionHTML
+                    );
+
+                }
+            );
+
+        }
+    );
 
 
                 /* =================================================
@@ -1794,7 +1948,7 @@
                             type="button"
                             class="nova-modal-action js-open-memberships-from-disciplines"
                         >
-                            VER MEMBRESÍAS
+                            VER PLANES
 
                             <span aria-hidden="true">
                                 →
@@ -1900,7 +2054,7 @@
                         <div class="nova-method-image">
 
                             <img
-                                src="img/ANALIZA.jpeg"
+                                src="img/ANALIZAR.jpeg"
                                 alt="Entrenamiento NOVA"
                             >
 
@@ -1910,7 +2064,7 @@
                         <div class="nova-method-image">
 
                             <img
-                                src="img/ANALIZA 2.jpeg"
+                                src="img/ANALIZAR 2.jpeg"
                                 alt="Proceso de entrenamiento NOVA"
                             >
 
@@ -1920,7 +2074,7 @@
                         <div class="nova-method-image">
 
                             <img
-                                src="img/ANALIZA 3.jpeg"
+                                src="img/ANALIZAR 3.jpeg"
                                 alt="Análisis de entrenamiento NOVA"
                             >
 
@@ -1930,7 +2084,7 @@
                         <div class="nova-method-image">
 
                             <img
-                                src="img/ANALIZA 4.jpeg"
+                                src="img/ANALIZAR 4.jpeg"
                                 alt="Proceso de entrenamiento NOVA"
                             >
 
@@ -2176,7 +2330,7 @@
                     return `
 
                         <div class="nova-modal-eyebrow">
-                            NOVA · MEMBRESÍAS
+                            NOVA · PLANES
                         </div>
 
 
@@ -2814,7 +2968,7 @@
                             <div class="nova-faq-footer">
 
                                 <span>
-                                    NOVA · TRAINING
+                                    NOVA · SWIM
                                 </span>
 
                                 <span>
@@ -3557,7 +3711,7 @@
                         <div class="nova-modal-legal-footer">
 
                             <span>
-                                NOVA · TRAINING
+                                NOVA · SWIM
                             </span>
 
                             <span>
