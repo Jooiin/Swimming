@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f5f4ef">
-<meta name="description" content="Entrenamiento personalizado de natación, aguas abiertas y fuerza con acompañamiento directo.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f5f4ef" name="theme-color"/>
+<meta content="Entrenamiento personalizado de natación, aguas abiertas y fuerza con acompañamiento directo." name="description"/>
 <title>SWIM · Entrena con dirección</title>
-
-<link rel="stylesheet" href="css/index.css">
+<link href="css/index.css" rel="stylesheet"/>
 <style>
 /* Imágenes de las cards: cambia las rutas para elegir tus fotos. */
 #explora .card-method { --card-image: url("img/nova training.png"); }
-#explora .card-direction { --card-image: url("img/nova 10.jpg"); }
+#explora .card-direction { --card-image: url("img/nova training.png"); }
 #explora .card {
   background-image: linear-gradient(180deg, rgba(0,0,0,.22), rgba(0,0,0,.78)), var(--card-image);
   background-size: cover;
@@ -32,199 +31,925 @@
 .hero .hero-inner {
   grid-template-columns: minmax(0, 1fr);
 }
+
+/* =========================================
+
+   DUDAS · WHATSAPP CHAT
+
+========================================= */
+
+
+
+.wa-float {
+
+  position: fixed;
+
+  right: 24px;
+
+  bottom: 24px;
+
+  z-index: 100;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+
+
+  padding: 14px 20px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+
+
+  background: #111;
+
+  color: #fff;
+
+
+
+  font-size: 12px;
+
+  font-weight: 850;
+
+  letter-spacing: .08em;
+
+
+
+  box-shadow: 0 10px 30px #0003;
+
+
+
+  transition:
+
+    transform .3s ease,
+
+    background .3s ease;
+
+}
+
+
+
+.wa-float:hover {
+
+  background: #292929;
+
+  transform: translateY(-3px);
+
+}
+
+
+
+.wa-dot {
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #FFD200;
+
+  box-shadow: 0 0 0 4px #FFD20020;
+
+}
+
+
+
+/* VENTANA */
+
+
+
+.wa-chat {
+
+  position: fixed;
+
+  right: 24px;
+
+  bottom: 88px;
+
+  z-index: 101;
+
+
+
+  width: min(370px, calc(100vw - 32px));
+
+  max-height: min(570px, calc(100dvh - 110px));
+
+
+
+  background: #fff;
+
+  border: 1px solid #e6e2d9;
+
+  border-radius: 24px;
+
+
+
+  box-shadow: 0 20px 70px #0003;
+
+  overflow: hidden;
+
+  flex-direction: column;
+
+
+
+  animation: wa-slide .3s ease both;
+
+}
+
+
+
+.wa-chat:not([hidden]) {
+
+  display: flex;
+
+}
+
+
+
+.wa-chat[hidden] {
+
+  display: none;
+
+}
+
+
+
+@keyframes wa-slide {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(18px);
+
+  }
+
+
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+
+/* ENCABEZADO */
+
+
+
+.wa-head {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+
+
+  padding: 23px;
+
+  background: #111;
+
+  color: #fff;
+
+}
+
+
+
+.wa-head small {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+
+
+  color: #FFD200;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .12em;
+
+}
+
+
+
+.wa-head strong {
+
+  display: block;
+
+  font-size: 21px;
+
+  font-weight: 850;
+
+  letter-spacing: -.04em;
+
+}
+
+
+
+.wa-head span {
+
+  display: block;
+
+  margin-top: 7px;
+
+  color: #bbb;
+
+  font-size: 12px;
+
+}
+
+
+
+.wa-head > button {
+
+  border: 0;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+}
+
+
+
+/* CONTENIDO */
+
+
+
+.wa-content {
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+}
+
+
+
+.wa-message {
+
+  width: 90%;
+
+  padding: 15px;
+
+  margin-bottom: 23px;
+
+
+
+  background: #F8F7F1;
+
+  border-radius: 16px 16px 16px 4px;
+
+}
+
+
+
+.wa-message strong {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 12px;
+
+}
+
+
+
+.wa-message p {
+
+  margin: 0;
+
+  color: #333;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+}
+
+
+
+.wa-label,
+
+.wa-form label {
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  letter-spacing: .1em;
+
+}
+
+
+
+/* PREGUNTAS RÁPIDAS */
+
+
+
+.wa-suggestions {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 23px;
+
+}
+
+
+
+.wa-suggestions button {
+
+  padding: 9px 13px;
+
+
+
+  border: 1px solid #e6e2d9;
+
+  border-radius: 999px;
+
+
+
+  background: #fff;
+
+  color: #111;
+
+
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+
+
+  transition: background .2s, border-color .2s;
+
+}
+
+
+
+.wa-suggestions button:hover {
+
+  background: #fff5b9;
+
+  border-color: #FFD200;
+
+}
+
+
+
+/* FORMULARIO */
+
+
+
+.wa-form textarea {
+
+  display: block;
+
+  width: 100%;
+
+  min-height: 85px;
+
+  padding: 13px;
+
+
+
+  border: 1px solid #e6e2d9;
+
+  border-radius: 14px;
+
+  resize: vertical;
+
+
+
+  background: #F8F7F1;
+
+  color: #111;
+
+
+
+  font: inherit;
+
+  font-size: 13px;
+
+}
+
+
+
+.wa-form textarea:focus {
+
+  outline: 2px solid #FFD200;
+
+  border-color: #FFD200;
+
+}
+
+
+
+.wa-send {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+
+
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 15px;
+
+
+
+  border: 0;
+
+  border-radius: 999px;
+
+
+
+  background: #FFD200;
+
+  color: #111;
+
+
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  letter-spacing: .03em;
+
+
+
+  transition: transform .25s, background .25s;
+
+}
+
+
+
+.wa-send:hover {
+
+  background: #f0c600;
+
+  transform: translateY(-2px);
+
+}
+
+
+
+.wa-note {
+
+  margin: 12px 0 0;
+
+  color: #777;
+
+  font-size: 10px;
+
+  text-align: center;
+
+}
+
+
+
+/* MÓVIL */
+
+
+
+@media (max-width: 650px) {
+
+  .wa-float {
+
+    right: 16px;
+
+    bottom: calc(16px + env(safe-area-inset-bottom));
+
+  }
+
+
+
+  .wa-chat {
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    max-height: 85dvh;
+
+    border-radius: 24px 24px 0 0;
+
+  }
+
+
+
+  .wa-content {
+
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+
+  }
+
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .wa-chat {
+
+    animation: none;
+
+  }
+
+
+
+  .wa-float,
+
+  .wa-send {
+
+    transition: none;
+
+  }
+
+}
+
+
+
+    
+
+/* SWIM · INTEGRACIÓN RESPONSIVE · 2026 */
+:root{--swim-paper:#F8F7F1;--swim-ink:#111;--swim-line:#e6e2d9;--swim-yellow:#FFD200}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+#analisis,#coach{scroll-margin-top:90px}
+.analysis-section{background:var(--swim-paper);padding:clamp(60px,7vw,100px) 0;border-top:1px solid var(--swim-line)}
+.analysis-section .wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+.analysis-section .section-title{max-width:720px;margin-bottom:32px}
+.analysis-section .section-title h2{font-size:clamp(2.3rem,5vw,4.5rem);line-height:1.05;letter-spacing:-.055em;margin:12px 0}
+.analysis-section .section-title p{max-width:680px;line-height:1.65}
+.analysis-inline{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,4vw,45px);align-items:start}
+.analysis-inline-copy,.analysis-inline-images figure{background:white;border:1px solid var(--swim-line);border-radius:24px;overflow:hidden}
+.analysis-inline-copy{padding:clamp(22px,3vw,40px)}
+.analysis-inline-copy h3{font-size:clamp(1.6rem,3vw,2.7rem);margin:14px 0 25px;letter-spacing:-.045em;line-height:1.12}
+.analysis-steps{padding:0;margin:0;list-style:none;display:grid;gap:16px}
+.analysis-steps li{display:grid;gap:6px;padding-bottom:16px;border-bottom:1px solid var(--swim-line)}
+.analysis-steps li strong{font-size:.94rem}.analysis-steps li span{font-size:.9rem;line-height:1.6;opacity:.75}
+.analysis-disclaimer{font-size:.77rem;line-height:1.6;margin:20px 0 0}
+.analysis-inline-images{display:grid;gap:16px}
+.analysis-inline-images figure{margin:0}
+.analysis-inline-images img{display:block;width:100%;height:clamp(210px,25vw,320px);object-fit:contain;background:#eae9e3;padding:12px}
+.analysis-inline-images figcaption{padding:16px 20px;font-weight:750;font-size:.85rem}
+.swim-flip{perspective:1600px;min-width:0}
+.swim-flip-inner{display:grid;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.75,.2,1);height:100%}
+.swim-flip.is-flipped .swim-flip-inner{transform:rotateY(180deg)}
+.swim-face{grid-area:1/1;min-width:0;min-height:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:flex-start;border-radius:24px;padding:clamp(22px,3vw,32px);background:#fff;border:1px solid var(--swim-line);overflow:hidden}
+.swim-face.swim-back{transform:rotateY(180deg);background:#22211e;color:white;border-color:#22211e}
+.swim-face.swim-back p,.swim-face.swim-back li{color:#e0dfdb}
+.swim-face h3{font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.1;margin:20px 0 12px}
+.swim-face p{line-height:1.65}
+.swim-flip-btn{border:1px solid currentColor;background:transparent;color:inherit;border-radius:999px;padding:12px 16px;font:inherit;font-size:.72rem;font-weight:800;letter-spacing:.035em;cursor:pointer;text-align:center;transition:background .2s,transform .2s}
+.swim-flip-btn:hover{transform:translateY(-2px);background:rgba(127,127,127,.1)}
+.swim-flip-btn:focus-visible{outline:3px solid var(--swim-yellow);outline-offset:3px}
+.swim-face>.swim-flip-btn{margin-top:auto}
+.swim-flip-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:20px}
+.swim-method-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.method-flip .swim-face{min-height:330px}
+.method-flip .num{font-weight:850;font-size:.77rem}
+.swim-explore-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.explore-flip .swim-face{min-height:clamp(340px,38vw,480px);justify-content:space-between}
+#explora .explore-flip .swim-front{background-image:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.8)),var(--card-image);background-size:cover;background-position:center;color:white}
+
+#explora .explore-flip.card-direction{--card-image:url('img/nova 10.jpg')}
+#explora .explore-flip .swim-face p{color:inherit}
+#explora .explore-flip .swim-face h3{font-size:clamp(1.9rem,3vw,3rem)}
+.plan-flip .swim-face{padding:0;min-height:560px}
+.plan-flip .swim-front>:not(.swim-plan-photo),.plan-flip .swim-back>*{margin-left:24px;margin-right:24px}
+.plan-flip .swim-front>.swim-flip-btn{margin-top:auto;margin-bottom:24px}
+.plan-flip .swim-back{padding:28px 0}
+.plan-flip .swim-back .swim-flip-actions{margin-bottom:0}
+.plan-flip .swim-front h3,.plan-flip .swim-back h3{margin-top:15px}
+.plan-flip .plan-benefits{padding-left:20px;max-height:210px;overflow:auto;font-size:.83rem;line-height:1.55}
+.swim-plan-photo{width:100%;height:185px;overflow:hidden;background:#eae9e3;margin-bottom:20px}
+.swim-plan-photo img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.plan-flip:hover .swim-plan-photo img{transform:scale(1.045)}
+.swim-plan-points{padding-left:20px;display:grid;gap:12px;font-size:.87rem;line-height:1.5}
+#coach .coach-flip .swim-face{min-height:410px;padding:clamp(28px,5vw,55px);background:#111;color:#fff;border-color:#111}
+#coach .coach-flip .swim-back{background:#262520}
+#coach .coach-flip .swim-face h2{font-size:clamp(2.1rem,4.5vw,3.8rem);line-height:1.08;max-width:750px;margin:15px 0}
+#coach .coach-flip .swim-face p{color:#d2d2d2;max-width:780px}
+#coach .coach-flip .eyebrow{color:var(--swim-yellow)}
+.coach-principles{display:grid;gap:10px;padding-left:20px;max-width:820px;line-height:1.55}
+.wa-plan-cta{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:16px;margin:0 0 14px;border:1px solid #e5c000;border-radius:16px;background:#FFD200;color:#111;text-align:left;cursor:pointer}
+.wa-plan-cta strong,.wa-plan-cta small{display:block}.wa-plan-cta strong{font-size:12px;font-weight:850}.wa-plan-cta small{font-size:11px;margin-top:4px}
+.wa-faq-link{display:block;width:100%;padding:10px 0 16px;border:0;background:none;color:#111;font-size:11px;font-weight:800;text-align:left;cursor:pointer}
+.wa-float{z-index:60}.wa-chat{z-index:61}
+@media(max-width:900px){.swim-method-grid{grid-template-columns:1fr}.method-flip .swim-face{min-height:240px}.analysis-inline{grid-template-columns:1fr}.analysis-inline-images{grid-template-columns:repeat(2,minmax(0,1fr))}.analysis-inline-images img{height:230px}}
+@media(max-width:680px){.swim-explore-grid{grid-template-columns:1fr}.analysis-inline-images{grid-template-columns:1fr}.analysis-inline-images img{height:260px}.plan-flip .swim-face{min-height:580px}.swim-face{padding:22px}.wa-chat{max-height:85dvh}}
+@media(prefers-reduced-motion:reduce){.swim-flip-inner,.swim-plan-photo img{transition:none!important}}
+
+</style>
+<style>
+/* Ajustes SWIM: coach en modal y tarjeta de dirección sin giro */
+.coach-pill{font:inherit;text-align:left;cursor:pointer;border:1px solid var(--line, #e6e2d9);max-width:100%;}
+.swim-direction-card{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:340px;padding:clamp(26px,4vw,44px);border-radius:26px;overflow:hidden;background:#171717;color:#fff;isolation:isolate;}
+.swim-direction-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(0,0,0,.84),rgba(0,0,0,.35)),var(--card-image, url('img/nova 10.jpg')) center/cover no-repeat;}
+.swim-direction-card h3{color:#fff;font-size:clamp(1.8rem,4vw,3rem);margin:12px 0;}
+.swim-direction-card p{color:#eee;max-width:540px;}
+.swim-direction-card .swim-flip-btn{align-self:flex-start;}
+.swim-coach-modal-head{display:flex;align-items:center;gap:22px;margin:24px 0;padding:20px;border:1px solid var(--line,#e6e2d9);border-radius:22px;background:#fff;}
+.swim-coach-modal-head img{width:112px;height:112px;border-radius:18px;object-fit:cover;flex-shrink:0;}
+.swim-coach-modal-head h3{margin:0 0 8px;font-size:1.4rem;}
+.swim-coach-modal-head p{margin:0;}
+.swim-coach-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0;margin:18px 0 26px;list-style:none;}
+.swim-coach-services li{padding:18px;border:1px solid var(--line,#e6e2d9);border-radius:16px;background:#fff;line-height:1.55;}
+.swim-coach-services strong{display:block;margin-bottom:5px;color:#111;}
+@media(max-width:650px){.swim-coach-services{grid-template-columns:1fr}.swim-coach-modal-head{align-items:flex-start;gap:14px;padding:14px}.swim-coach-modal-head img{width:76px;height:76px}.swim-direction-card{min-height:310px}}
+</style>
+<style>
+/* Últimos ajustes: galería de análisis y segunda tarjeta de SWIM */
+.analysis-section .analysis-inline{display:block}
+.analysis-section .analysis-inline-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:100%}
+.swim-process-card::before{background:linear-gradient(100deg,rgba(0,0,0,.88),rgba(0,0,0,.45)),url('mg/chaps 22.jpg') center/cover no-repeat}
+.swim-analysis-modal{max-width:850px;margin-top:24px;padding:clamp(22px,4vw,38px);background:#fff;border:1px solid var(--swim-line,#e6e2d9);border-radius:24px}
+.swim-analysis-modal h3{font-size:clamp(1.5rem,3vw,2.4rem)}
+@media(max-width:680px){.analysis-section .analysis-inline-images{grid-template-columns:1fr}}
+</style>
+<style>
+
+/* SWIM · AJUSTES FINALES: NAVEGACIÓN, PROCESO Y PROGRAMAS */
+.nav-image-label{display:none}
+.swim-simple-plan{padding:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--swim-line,#e6e2d9);border-radius:24px;background:#fff;min-width:0;transition:transform .3s ease,box-shadow .3s ease}
+.swim-simple-plan:hover{transform:translateY(-5px);box-shadow:0 18px 40px #00000012}
+/* Fotografía integrada: el contenedor define el recorte y evita saltos. */
+.swim-simple-plan .swim-plan-photo {
+  position: relative;
+  isolation: isolate;
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 23px 23px 0 0;
+  background: #eae9e3;
+}
+
+.swim-simple-plan .swim-plan-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  transition: transform .65s cubic-bezier(.2,.65,.3,1);
+}
+
+/* Une la fotografía con el fondo de la tarjeta sin tapar el sujeto. */
+.swim-simple-plan .swim-plan-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 66%,
+    rgba(255, 255, 255, .12) 76%,
+    rgba(255, 255, 255, .55) 89%,
+    #fff 100%
+  );
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .swim-simple-plan:hover .swim-plan-photo img {
+    transform: scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swim-simple-plan,
+  .swim-simple-plan .swim-plan-photo img {
+    transition: none;
+  }
+  .swim-simple-plan:hover,
+  .swim-simple-plan:hover .swim-plan-photo img {
+    transform: none;
+  }
+}
+.swim-simple-plan-body{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:25px;gap:12px}
+.swim-simple-plan-body h3{margin:0;font-size:clamp(1.6rem,2.6vw,2.3rem)}
+.swim-simple-plan-body p{margin:0}
+.swim-simple-plan-body .plan-benefits{padding-left:19px;margin:4px 0 18px;line-height:1.6}
+.swim-simple-plan-body .swim-flip-btn{margin-top:auto}
+.swim-simple-plan .plan-recommended{display:inline-block;padding:5px 10px;border-radius:999px;background:#FFD200;color:#111;font-size:10px;font-weight:800;letter-spacing:.05em}
+.swim-process-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.swim-process-gallery figure{min-width:0;margin:0;padding:0;overflow:hidden;border:1px solid var(--swim-line,#e6e2d9);border-radius:18px;background:white}
+/* Análisis técnico · fotografías integradas de borde a borde */
+.analysis-inline-images.swim-process-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center;
+  background: #eae9e3;
+}
+.analysis-inline-images.swim-process-gallery figcaption {
+  position: relative;
+  margin: 0;
+  background: #fff;
+}
+.swim-process-gallery figcaption{padding:14px 18px;font-size:.85rem;font-weight:750}
+@media(max-width:900px){.nav.open>a{border-bottom:1px solid rgba(17,17,17,.12);padding-block:18px}.nav.open>a:first-child{border-top:1px solid rgba(17,17,17,.12)}.nav.open .nav-image{margin-top:18px}.nav.open .nav-image-label{display:block;font-size:.75rem;font-weight:800;letter-spacing:.12em;margin-bottom:12px}}
+@media(max-width:650px){.swim-process-gallery{grid-template-columns:1fr}.swim-simple-plan .swim-plan-photo{aspect-ratio:16 / 11}}
+
 </style>
 </head>
 <body>
 <header class="header" id="inicio">
-  <div class="wrap header-inner">
-    <a href="#inicio" class="logo" aria-label="SWIM inicio">SWIM</a>
-<nav class="nav" id="nav" aria-label="Navegación principal">
-  <a href="#metodo">MÉTODO</a>
-
-  <a href="#programas">PROGRAMAS</a>
-
-  <!-- IMAGEN SOLO EN EL MENÚ HAMBURGUESA -->
-  <div class="nav-image">
-    <img
-      src="img/zznado.jpeg"
-      alt="Entrenamiento de natación"
-      decoding="async"
-    >
-  </div>
-
-  <button type="button" data-modal="survey">
-    ENCUENTRA TU PLAN
-  </button>
-
-  <button type="button" data-modal="faq">
-    DUDAS
-  </button>
-
-  <a
-    class="btn btn-yellow"
-    target="_blank"
-    rel="noopener noreferrer"
-    href="https://calendly.com/alancoach8/nueva-reunion"
-  >
-    HABLAR CON COACH
-  </a>
+<div class="wrap header-inner">
+<a aria-label="SWIM inicio" class="logo" href="#inicio">SWIM</a>
+<nav aria-label="Navegación principal" class="nav" id="nav">
+<a href="#metodo">MÉTODO</a>
+<a href="#explora" data-modal="analysisProcess">ANÁLISIS</a>
+<a href="#programas">PROGRAMAS</a>
+<a href="#inicio" data-modal="coach">COACH</a>
+<div class="nav-image"><span class="nav-image-label"></span><img alt="Entrenamiento de natación" decoding="async" src="img/chica.jpeg"/></div>
 </nav>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"
-      aria-expanded="false" aria-controls="nav">☰</button>
-  </div>
+<button aria-controls="nav" aria-expanded="false" aria-label="Abrir menú" class="menu-toggle" id="menuToggle">☰</button>
+</div>
 </header>
 <main>
-  <!-- PRESENTACIÓN -->
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <span class="eyebrow">SWIM</span>
-      <h1>Entrenamiento.<br>Rendimiento.<br>Evolución.</h1>
-      <p class="hero-intro">
+<!-- PRESENTACIÓN -->
+<section class="hero">
+<div class="wrap hero-inner">
+<span class="eyebrow">SWIM</span>
+<h1>Entrenamiento.<br/>Rendimiento.<br/>Evolución.</h1>
+<p class="hero-intro">
         Te ayudo a entrenar con un plan personalizado, sesiones claras
         y atención directa para avanzar hacia tus objetivos.
       </p>
-      <div class="hero-actions">
-        <a href="#programas" class="btn">CONOCER PROGRAMAS</a>
-        <button class="btn btn-outline" data-modal="survey">ENCUENTRA TU PLAN</button>
-      </div>
-      <button class="coach-pill" type="button" data-modal="coach">
-        <img src="img/perfil1.jpeg" alt="Coach Alan Aguilar">
-        <span class="coach-pill-content">
-          <strong>Entrenamiento con acompañamiento directo</strong>
-          <small>Online a distancia · Presencial sujeto a disponibilidad</small>
-        </span>
-        <span class="coach-pill-arrow" aria-hidden="true">|</span>
-      </button>
-    </div>
-  </section>
-  <!-- MÉTODO -->
-  <section class="section method" id="metodo">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">EL MÉTODO SWIM</span>
-        <h2>Menos improvisación.<br>Más dirección.</h2>
-        <p>
+<div class="hero-actions">
+<a class="btn" href="#programas">CONOCER PROGRAMAS</a>
+<button class="btn btn-outline" data-modal="survey">ENCUENTRA TU PLAN</button>
+</div>
+<button class="coach-pill" type="button" data-modal="coach" aria-label="Conocer al coach Alan Aguilar">
+<img alt="Coach Alan Aguilar" src="img/perfil1.jpeg"/>
+<span class="coach-pill-content">
+<strong>Entrenamiento con acompañamiento directo</strong>
+<small>Acompañamiento virtual · Presencial sujeto a evaluación</small>
+</span>
+<span aria-hidden="true" class="coach-pill-arrow">|</span>
+</button>
+</div>
+</section>
+<!-- MÉTODO -->
+<section class="section method" id="metodo">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">EL MÉTODO SWIM</span>
+<h2>Menos improvisación.<br/>Más dirección.</h2>
+<p>
           No se trata de acumular sesiones. Construyo un plan a partir de tu nivel, tus objetivos y el tiempo que tienes para entrenar. Cada sesión tiene una intención: mejorar tu técnica, desarrollar resistencia o trabajar tus ritmos. Te explico qué trabajas, por qué lo hacemos y cómo avanzamos de forma progresiva.
         </p>
-      </div>
-      <div class="method-grid">
-        <article class="method-item">
-          <span class="num">01 · CONOZCO</span>
-          <h3>Tu punto de partida.</h3>
-          <p>Escucho tus objetivos y reviso tu experiencia, disponibilidad y entrenamiento actual. Con esa información identifico qué necesitas trabajar y establecemos un punto de partida realista para ti.</p>
-        </article>
-        <article class="method-item">
-          <span class="num">02 · DISEÑO</span>
-          <h3>Tu programa.</h3>
-          <p>Preparo sesiones que responden a tu nivel, necesidades y meta deportiva. Organizo el trabajo técnico, las distancias, los ritmos y los descansos para que sepas qué hacer y con qué intención entrenar.</p>
-        </article>
-        <article class="method-item">
-          <span class="num">03 · AJUSTO</span>
-          <h3>Tu proceso.</h3>
-          <p>Reviso tus avances y adapto las cargas de acuerdo con tu respuesta al entrenamiento. Tus sensaciones, resultados y constancia me ayudan a ajustar la exigencia y mantener una progresión acorde con tu proceso.</p>
-        </article>
-      </div>
+</div>
+<div class="method-grid swim-method-grid"><div class="swim-flip method-flip"><div class="swim-flip-inner"><div class="swim-face swim-front"><span class="num">01 · CONOZCO</span><h3>Tu punto de partida.</h3><p>Escucho tus objetivos y reviso tu experiencia, disponibilidad y entrenamiento actual.</p><button aria-label="Ver más sobre Tu punto de partida." class="swim-flip-btn" data-flip="" type="button">DESCUBRIR <span aria-hidden="true"></span></button></div><div class="swim-face swim-back" inert=""><span class="num">MÉTODO SWIM</span><h3>Evaluación inicial</h3><p>Identifico tu nivel, objetivos, tiempo disponible y necesidades para establecer prioridades realistas.</p><button class="swim-flip-btn" data-flip="" type="button">VOLVER <span aria-hidden="true"></span></button></div></div></div><div class="swim-flip method-flip"><div class="swim-flip-inner"><div class="swim-face swim-front"><span class="num">02 · DISEÑO</span><h3>Tu programa.</h3><p>Preparo sesiones según tu nivel y meta deportiva.</p><button aria-label="Ver más sobre Tu programa." class="swim-flip-btn" data-flip="" type="button">DESCUBRIR <span aria-hidden="true"></span></button></div><div class="swim-face swim-back" inert=""><span class="num">MÉTODO SWIM</span><h3>Sesiones con intención</h3><p>Organizo técnica, distancias, ritmos, descansos y progresión para que cada entrenamiento tenga una finalidad.</p><button class="swim-flip-btn" data-flip="" type="button">VOLVER <span aria-hidden="true"></span></button></div></div></div><div class="swim-flip method-flip"><div class="swim-flip-inner"><div class="swim-face swim-front"><span class="num">03 · AJUSTO</span><h3>Tu proceso.</h3><p>Reviso tus avances y adapto las cargas a tu respuesta al entrenamiento.</p><button aria-label="Ver más sobre Tu proceso." class="swim-flip-btn" data-flip="" type="button">DESCUBRIR <span aria-hidden="true"></span></button></div><div class="swim-face swim-back" inert=""><span class="num">MÉTODO SWIM</span><h3>Seguimiento continuo</h3><p>Tus sensaciones, resultados y constancia orientan los ajustes de volumen, intensidad y planificación.</p><button class="swim-flip-btn" data-flip="" type="button">VOLVER <span aria-hidden="true"></span></button></div></div></div></div>
+</div>
+</section>
+<!-- TARJETAS -->
+<section class="section" id="explora">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">SWIM</span>
+<h2>Entrena con dirección.</h2>
+<p>Descubre cómo se organizan tus sesiones y cómo se da seguimiento a tu entrenamiento.</p>
+</div>
+<div class="cards swim-explore-grid">
+  <article class="swim-direction-card card-direction">
+    <span class="number">01</span>
+    <div>
+      <span class="eyebrow">ENTRENAMIENTO PERSONALIZADO</span>
+      <h3>ENTRENA CON DIRECCIÓN</h3>
+      <p>Organizo tus sesiones para que cada entrenamiento tenga una finalidad. Conoce la planificación, la estructura y el seguimiento.</p>
     </div>
-  </section>
-  <!-- TARJETAS -->
-  <section class="section" id="explora">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">SWIM</span>
-        <h2>Conoce cómo trabajamos.</h2>
-        <p>Explora los programas, resuelve tus dudas y encuentra una opción para comenzar.</p>
-      </div>
-      <div class="cards">
-        <button class="card card-method" data-modal="method">
-          <span class="number">01</span>
-          <div>
-            <span class="eyebrow">CÓMO TRABAJO</span>
-            <h3>MÉTODO SWIM</h3>
-            <p>Conozco tu punto de partida, diseño tus sesiones y acompaño tu proceso.</p>
-            <span class="arrow">CONOCER MÁS</span>
-          </div>
-        </button>
-        <button class="card card-direction" data-modal="direction">
-          <span class="number">02</span>
-          <div>
-            <span class="eyebrow">ENTRENAMIENTO PERSONALIZADO</span>
-            <h3>ENTRENA CON DIRECCIÓN</h3>
-            <p>Organizo tus sesiones para que cada entrenamiento tenga una finalidad.</p>
-            <span class="arrow">CONOCER MÁS</span>
-          </div>
-        </button>
+    <button class="swim-flip-btn" type="button" data-modal="direction">VER DETALLES</button>
+  </article>
+  <article class="swim-direction-card swim-process-card">
+    <span class="number">02</span>
+    <div>
+      <span class="eyebrow">MI PROCESO</span>
+      <h3>DEL VIDEO A UNA CORRECCIÓN ÚTIL</h3>
+      <p>Observo tu técnica, identifico prioridades, propongo ajustes y reviso tu evolución.</p>
+    </div>
+    <button class="swim-flip-btn" type="button" data-modal="analysisProcess">VER MI PROCESO</button>
+  </article>
+</div>
+</div>
+</section>
+<!-- PLANES -->
+<section class="section plans" id="programas">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">SWIM · PROGRAMAS</span>
+<h2>Elige cómo quieres entrenar.</h2>
+<p>Trabajo principalmente con acompañamiento virtual, planificación y seguimiento directo.</p>
+</div>
+<div class="plan-grid" id="planGrid"></div>
+</div>
+</section>
+<!-- CONTACTO -->
 
-      </div>
-    </div>
-  </section>
-  <!-- PLANES -->
-  <section class="section plans" id="programas">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">SWIM · PROGRAMAS</span>
-        <h2>Elige cómo quieres entrenar.</h2>
-        <p>Trabajo principalmente online a distancia, con planificación y seguimiento directo.</p>
-      </div>
-      <div class="plan-grid" id="planGrid"></div>
-    </div>
-  </section>
-  <!-- CONTACTO -->
-  <section class="section">
-    <div class="wrap">
-      <div class="cta">
-        <div>
-          <span class="eyebrow">COMIENZA CON SWIM</span>
-          <h2>Hablemos de tu próximo objetivo.</h2>
-          <p>Cuéntame qué quieres lograr y te orientaré para dar el siguiente paso.</p>
-        </div>
-        <button type="button" class="btn btn-yellow" data-modal="survey">ENCUENTRA TU PLAN</button>
-      </div>
-    </div>
-  </section>
 </main>
 <footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="logo" href="#inicio">SWIM</a>
-        <p>SWIM<br>Entrenamiento. Rendimiento. Evolución.</p>
-      </div>
-      <div>
-        <h3>EXPLORAR</h3>
-        <a href="#metodo">Método SWIM</a>
-        <a href="#programas">Programas</a>
-        <button data-modal="survey">Encuentra tu plan</button>
-        <button data-modal="faq">Preguntas frecuentes</button>
-      </div>
-      <div>
-        <h3>CONTACTO</h3>
-        <a href="https://wa.me/525612584271" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a href="https://calendly.com/alancoach8/nueva-reunion" target="_blank" rel="noopener noreferrer">Calendly</a>
-        <a href="mailto:hola@nova.training">Correo electrónico</a>
-      </div>
-      <div>
-        <h3>LEGAL</h3>
-        <button data-legal="privacy">Privacidad</button>
-        <button data-legal="terms">Términos y condiciones</button>
-        <button data-legal="cookies">Cookies</button>
-        <button data-legal="notice">Aviso legal</button>
-        <button data-legal="cancellations">Cancelaciones y reembolsos</button>
-        <button data-legal="responsibility">Responsabilidad</button>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 SWIM</span>
-      <span>Entrena con dirección.</span>
-    </div>
-  </div>
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="logo" href="#inicio">SWIM</a>
+<p>SWIM<br/>Entrenamiento. Rendimiento. Evolución.</p>
+</div>
+<div>
+<h3>EXPLORAR</h3>
+<a href="#metodo">Método SWIM</a>
+<a href="#programas">Programas</a>
+<a href="#explora" data-modal="analysisProcess">Análisis técnico</a>
+<a data-modal="coach">Coach</a>
+<button data-modal="survey">Encuentra tu plan</button>
+<button data-open-dudas="">Centro de dudas</button>
+<button data-modal="faq">Preguntas frecuentes</button>
+</div>
+<div>
+<h3>CONTACTO</h3>
+<a href="https://calendly.com/alancoach8/nueva-reunion" rel="noopener noreferrer" target="_blank">Calendly</a>
+<a href="mailto:hola@nova.training">Correo electrónico</a>
+</div>
+<div>
+<h3>LEGAL</h3>
+<button data-legal="privacy">Privacidad</button>
+<button data-legal="terms">Términos y condiciones</button>
+<button data-legal="cookies">Cookies</button>
+<button data-legal="notice">Aviso legal</button>
+<button data-legal="cancellations">Cancelaciones y reembolsos</button>
+<button data-legal="responsibility">Responsabilidad</button>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 SWIM</span>
+<span>Entrena con dirección.</span>
+</div>
+</div>
 </footer>
 <!-- VENTANA GLOBAL -->
-<div class="modal" id="modal" aria-hidden="true">
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" data-close aria-label="Cerrar ventana">×</button>
-    <div id="modalContent"></div>
-  </div>
+<div aria-hidden="true" class="modal" id="modal">
+<div class="modal-backdrop" data-close=""></div>
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal-dialog" role="dialog">
+<button aria-label="Cerrar ventana" class="modal-close" data-close="">×</button>
+<div id="modalContent"></div>
+</div>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
@@ -347,27 +1072,41 @@ document.addEventListener("DOMContentLoaded",()=>{
   ];
   const money=n=>"$"+n.toLocaleString("es-MX");
   document.getElementById("planGrid").innerHTML=plans.map(p=>`
-    <article class="plan">
-      <span class="plan-top">${p.number} · ${p.category}</span>
-      ${p.id==="rendimiento"?'<span class="plan-recommended" style="display:inline-block;padding:4px 9px;border-radius:999px;background:#ffd60a;color:#111;font-size:10px;font-weight:700;letter-spacing:.06em;line-height:1.2;">RECOMENDADO</span>':""}
-      <h3>${p.title}</h3>
-      <p>${p.description}</p>
-      <ul class="plan-benefits">${p.details.map(d=>`<li>${d}</li>`).join("")}</ul>
-      <button class="btn" data-plan="${p.id}">CONOCER PLAN</button>
+    <article class="swim-simple-plan plan">
+      <div class="swim-simple-plan-body">
+        <span class="plan-top">${p.number} · ${p.category}</span>
+        ${p.id==="rendimiento"?'<span class="plan-recommended">RECOMENDADO</span>':""}
+        <h3>${p.title}</h3>
+        <p>${p.description}</p>
+        <ul class="plan-benefits">${p.details.map(d=>`<li>${d}</li>`).join("")}</ul>
+        <button class="swim-flip-btn" data-plan="${p.id}" type="button">CONOCER PLAN</button>
+      </div>
     </article>
   `).join("");
   function coachHTML(){
     return `
       <span class="eyebrow">SWIM · COACH</span>
-      <h2 id="modalTitle">Entrenamiento con acompañamiento directo.</h2>
-      <p class="lead">Soy tu punto de contacto durante el proceso. Me encargo de preparar tus sesiones y revisar cómo avanzas.</p>
+      <h2 id="modalTitle">Conoce a tu coach.</h2>
+      <div class="swim-coach-modal-head">
+        <img src="img/perfil1.jpeg" alt="Coach Alan Aguilar" loading="lazy">
+        <div><h3>Alan Aguilar</h3><p>Soy quien diseña tus entrenamientos, revisa tus avances y te acompaña directamente durante el proceso.</p></div>
+      </div>
       <div class="modal-section">
-        <h3>¿Cómo trabajo contigo?</h3>
-        <p>Primero conozco tus objetivos, experiencia y disponibilidad. Después diseño un programa adaptado a tus necesidades y realizo ajustes según tu evolución.</p>
-        <p>Trabajo principalmente online a distancia. El entrenamiento presencial está sujeto a ubicación, horarios y disponibilidad.</p>
+        <h3>¿Qué hago como coach?</h3>
+        <ul class="swim-coach-services">
+          <li><strong>Evaluación inicial.</strong> Conozco tus objetivos, experiencia, nivel y disponibilidad.</li>
+          <li><strong>Planificación personalizada.</strong> Organizo sesiones con estructura, técnica, ritmos y progresión.</li>
+          <li><strong>Análisis técnico de video.</strong> Observo tu ejecución y señalo correcciones prioritarias cuando está incluido en tu programa.</li>
+          <li><strong>Retroalimentación y ajustes.</strong> Reviso sensaciones, resultados y constancia para adaptar las cargas según el seguimiento acordado.</li>
+          <li><strong>Videollamadas de seguimiento.</strong> Conversamos sobre tu proceso cuando el programa contratado las incluye.</li>
+          <li><strong>Técnica antes que volumen.</strong> Busco mejorar control y eficiencia antes de aumentar la carga.</li>
+          <li><strong>Fuerza complementaria.</strong> La incorporo cuando responde a tus necesidades y objetivos.</li>
+        </ul>
+        <p>El acompañamiento es principalmente virtual. Tú entrenas en una alberca a la que tengas acceso; no cuento con alberca propia. El acompañamiento presencial depende de la ubicación, instalaciones y disponibilidad.</p>
+        <p>La frecuencia de revisiones, análisis y videollamadas se define en cada programa.</p>
       </div>
       <div class="modal-actions">
-        <a class="btn btn-yellow" href="${whatsapp("Hola SWIM, quiero información sobre el entrenamiento con acompañamiento directo.")}" target="_blank" rel="noopener noreferrer">HABLAR CONMIGO</a>
+        <a class="btn btn-yellow" href="https://calendly.com/alancoach8/nueva-reunion" target="_blank" rel="noopener noreferrer">HABLAR CON ALAN</a>
       </div>`;
   }
   function methodHTML(){
@@ -510,7 +1249,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     {key:"Experiencia",title:"¿Cuánto tiempo llevas entrenando?",options:["Estoy comenzando","Menos de un año","De uno a tres años","Más de tres años"]},
     {key:"Disponibilidad",title:"¿Cuántos días puedes entrenar?",options:["1 a 2 días","3 a 4 días","5 a 6 días"]},
     {key:"Distancia",title:"¿Qué distancia puedes nadar de forma continua?",options:["Aún no nado de forma continua","Hasta 200 m","De 200 a 1,000 m","Más de 1,000 m","No aplica"]},
-    {key:"Modalidad",title:"¿Cómo prefieres entrenar?",options:["Online a distancia","Presencial, si está disponible","Quiero orientación"]}
   ];
   // Preguntas exclusivas para quien selecciona FUERZA.
   const questionsForce = [
@@ -659,12 +1397,29 @@ document.addEventListener("DOMContentLoaded",()=>{
       </div>
     `);
   }
+  function analysisProcessHTML(){
+    return `<span class="eyebrow">SWIM · ANÁLISIS TÉCNICO</span>
+      <h2 id="modalTitle">Primero observo. Después ajusto.</h2>
+      <p>Reviso los videos que me compartes para identificar oportunidades de mejora. Antes de aumentar las cargas, doy prioridad a la técnica, el control corporal y la eficiencia del movimiento.</p>
+      <div class="swim-analysis-modal"><span class="eyebrow">MI PROCESO</span><h3>Del video a una corrección útil.</h3>
+      <ol class="analysis-steps">
+        <li><strong>01 · Observo</strong><span>Reviso brazada, alineación, respiración y coordinación según lo que permite ver la grabación.</span></li>
+        <li><strong>02 · Identifico</strong><span>Selecciono los ajustes prioritarios en lugar de cambiar todo al mismo tiempo.</span></li>
+        <li><strong>03 · Aplico</strong><span>Te explico ejercicios y referencias técnicas para trabajar en tus siguientes sesiones.</span></li>
+        <li><strong>04 · Reevalúo</strong><span>Comparo nuevos videos y ajusto la planificación cuando el programa contratado incluye este seguimiento.</span></li>
+      </ol>
+      <div class="analysis-inline-images swim-process-gallery">
+        <figure><img alt="Observación de la técnica de natación" loading="lazy" src="img/ANALIZAR.jpeg"><figcaption>Observación de la técnica</figcaption></figure>
+        <figure><img alt="Revisión de movimientos en natación" loading="lazy" src="img/ANALIZAR 4.jpeg"><figcaption>Correcciones aplicables en el agua</figcaption></figure>
+      </div>
+      <p class="analysis-disclaimer">Imágenes ilustrativas del proceso. La cantidad de análisis y revisiones depende del programa acordado.</p></div>`;
+  }
   function showModal(type){
     if(type==="survey"){openSurvey();return;}
     const views={
-      coach:coachHTML,
-      method:methodHTML,
       direction:directionHTML,
+      analysisProcess:analysisProcessHTML,
+      coach:coachHTML,
       plans:plansHTML,
       faq:faqHTML
     };
@@ -721,6 +1476,103 @@ document.addEventListener("DOMContentLoaded",()=>{
       renderSurvey();
     }
   });
+});
+</script>
+<!-- =====================================
+
+     DUDAS · CHAT DE WHATSAPP
+
+===================================== -->
+<button aria-controls="waChat" aria-expanded="false" class="wa-float" id="waToggle" type="button">
+<span class="wa-dot"></span>
+
+  DUDAS
+
+  <span aria-hidden="true"></span>
+</button>
+<section aria-label="Contacto por WhatsApp" class="wa-chat" hidden="" id="waChat">
+<div class="wa-head">
+<div>
+<small>SWIM · CONTACTO</small>
+<strong>¿Tienes alguna duda?</strong>
+<span>Habla directamente conmigo</span>
+</div>
+<button aria-label="Cerrar chat" id="waClose" type="button">×</button>
+</div>
+<div class="wa-content">
+<div class="wa-message">
+<strong>Coach Alan</strong>
+<p>
+
+        ¡Hola! Soy Alan. 👋 Cuéntame qué quieres mejorar en tu entrenamiento y te orientaré personalmente.
+
+      </p>
+</div>
+<span class="wa-label">PREGUNTAS FRECUENTES</span>
+<div class="wa-suggestions">
+<button data-wa-question="Quisiera información sobre los programas de entrenamiento." type="button">
+
+        Programas
+
+      </button>
+<button data-wa-question="Quisiera conocer los precios de los planes." type="button">
+
+        Precios
+
+      </button>
+<button data-wa-question="Quisiera saber cómo funciona el acompañamiento virtual." type="button">
+
+        Acompañamiento virtual
+
+      </button>
+</div>
+<button class="wa-plan-cta" data-modal="survey" type="button"><span><strong>ENCUENTRA TU PLAN</strong><small>Responde unas preguntas y descubre tu punto de partida.</small></span><span aria-hidden="true"></span></button>
+<button class="wa-faq-link" data-modal="faq" type="button">VER TODAS LAS PREGUNTAS FRECUENTES </button>
+<form class="wa-form" id="waForm">
+<label for="waInput">TU MENSAJE</label>
+<textarea id="waInput" maxlength="1000" placeholder="Escribe tu duda aquí..." required="" rows="3"></textarea>
+<button class="wa-send" type="submit">
+
+        CONTINUAR
+
+        <span aria-hidden="true"></span>
+</button>
+</form>
+<p class="wa-note">
+
+      Tu mensaje se abrirá en WhatsApp
+
+      para que confirmes el envío.
+
+    </p>
+</div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const chat=document.getElementById('waChat');
+  const toggle=document.getElementById('waToggle');
+  const close=document.getElementById('waClose');
+  const input=document.getElementById('waInput');
+  const form=document.getElementById('waForm');
+  const openChat=(open,focus=true)=>{chat.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(focus)(open?input:toggle).focus();};
+  toggle.addEventListener('click',()=>openChat(chat.hidden));
+  close.addEventListener('click',()=>openChat(false));
+  document.querySelectorAll('[data-open-dudas]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('nav')?.classList.remove('open');document.getElementById('menuToggle')?.setAttribute('aria-expanded','false');openChat(true);}));
+  document.querySelectorAll('[data-wa-question]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.waQuestion||'';input.focus();}));
+  form.addEventListener('submit',e=>{e.preventDefault();const msg=input.value.trim();if(msg)window.open('https://wa.me/525612584271?text='+encodeURIComponent('Hola Coach Alan, '+msg),'_blank','noopener,noreferrer');});
+  document.addEventListener('click',e=>{
+    const flipButton=e.target.closest('[data-flip]');
+    if(flipButton){
+      const card=flipButton.closest('.swim-flip');if(!card)return;
+      const flipped=card.classList.toggle('is-flipped');
+      const front=card.querySelector('.swim-front'),back=card.querySelector('.swim-back');
+      front.inert=flipped;back.inert=!flipped;
+      const target=flipped?back:front;
+      target.querySelector('[data-flip]')?.focus({preventScroll:true});
+    }
+    if(e.target.closest('[data-modal]')&& !chat.hidden)openChat(false,false);
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!chat.hidden)openChat(false);});
 });
 </script>
 </body>
