@@ -705,7 +705,7 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 /* Últimos ajustes: galería de análisis y segunda tarjeta de SWIM */
 .analysis-section .analysis-inline{display:block}
 .analysis-section .analysis-inline-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:100%}
-.swim-process-card::before{background:linear-gradient(100deg,rgba(0,0,0,.88),rgba(0,0,0,.45)),url('mg/chaps 22.jpg') center/cover no-repeat}
+.swim-process-card::before{background:linear-gradient(100deg,rgba(0,0,0,.88),rgba(0,0,0,.45)),url('img/chaps.22.JPG') center/cover no-repeat}
 .swim-analysis-modal{max-width:850px;margin-top:24px;padding:clamp(22px,4vw,38px);background:#fff;border:1px solid var(--swim-line,#e6e2d9);border-radius:24px}
 .swim-analysis-modal h3{font-size:clamp(1.5rem,3vw,2.4rem)}
 @media(max-width:680px){.analysis-section .analysis-inline-images{grid-template-columns:1fr}}
@@ -819,7 +819,7 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 <a href="#explora" data-modal="analysisProcess">ANÁLISIS</a>
 <a href="#programas">PROGRAMAS</a>
 <a href="#inicio" data-modal="coach">COACH</a>
-<div class="nav-image"><span class="nav-image-label"></span><img alt="Entrenamiento de natación" decoding="async" src="img/chica.jpeg"/></div>
+<div class="nav-image"><span class="nav-image-label"></span><img alt="Entrenamiento de natación" decoding="async" src="img/Nadador feliz con botella y aletas.png"/></div>
 </nav>
 <button aria-controls="nav" aria-expanded="false" aria-label="Abrir menú" class="menu-toggle" id="menuToggle">☰</button>
 </div>
@@ -844,7 +844,7 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 <strong>Entrenamiento con acompañamiento directo</strong>
 <small>Acompañamiento virtual · Presencial sujeto a evaluación</small>
 </span>
-<span aria-hidden="true" class="coach-pill-arrow">|</span>
+<span aria-hidden="true" class="coach-pill-arrow">✌</span>
 </button>
 </div>
 </section>
@@ -1478,102 +1478,356 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 });
 </script>
+
 <!-- =====================================
-
      DUDAS · CHAT DE WHATSAPP
-
 ===================================== -->
-<button aria-controls="waChat" aria-expanded="false" class="wa-float" id="waToggle" type="button">
-<span class="wa-dot"></span>
+
+<button
+  aria-controls="waChat"
+  aria-expanded="false"
+  class="wa-float"
+  id="waToggle"
+  type="button"
+>
+  <span class="wa-dot"></span>
 
   DUDAS
 
   <span aria-hidden="true"></span>
 </button>
-<section aria-label="Contacto por WhatsApp" class="wa-chat" hidden="" id="waChat">
-<div class="wa-head">
-<div>
-<small>SWIM · CONTACTO</small>
-<strong>¿Tienes alguna duda?</strong>
-<span>Habla directamente conmigo</span>
-</div>
-<button aria-label="Cerrar chat" id="waClose" type="button">×</button>
-</div>
-<div class="wa-content">
-<div class="wa-message">
-<strong>Coach Alan</strong>
-<p>
 
-        ¡Hola! Soy Alan. 👋 Cuéntame qué quieres mejorar en tu entrenamiento y te orientaré personalmente.
+<section
+  aria-label="Contacto por WhatsApp"
+  class="wa-chat"
+  hidden
+  id="waChat"
+>
 
+  <div class="wa-head">
+    <div>
+      <small>SWIM · CONTACTO</small>
+      <strong>¿Tienes alguna duda?</strong>
+      <span>Habla directamente conmigo</span>
+    </div>
+
+    <button
+      aria-label="Cerrar chat"
+      id="waClose"
+      type="button"
+    >×</button>
+  </div>
+
+  <div class="wa-content">
+
+    <div class="wa-message">
+      <strong>Coach</strong>
+
+      <p>
+        ¡Hola! Soy Alan. 👋 Cuéntame qué quieres
+        mejorar en tu entrenamiento y te
+        orientaré personalmente.
       </p>
-</div>
-<span class="wa-label">PREGUNTAS FRECUENTES</span>
-<div class="wa-suggestions">
-<button data-wa-question="Quisiera información sobre los programas de entrenamiento." type="button">
+    </div>
 
+    <span class="wa-label">
+      PREGUNTAS FRECUENTES
+    </span>
+
+    <div class="wa-suggestions">
+
+      <button
+        data-wa-question="Quisiera información sobre los programas de entrenamiento."
+        type="button"
+      >
         Programas
-
       </button>
-<button data-wa-question="Quisiera conocer los precios de los planes." type="button">
 
+      <button
+        data-wa-question="Quisiera conocer los precios de los planes."
+        type="button"
+      >
         Precios
-
       </button>
-<button data-wa-question="Quisiera saber cómo funciona el acompañamiento virtual." type="button">
 
+      <button
+        data-wa-question="Quisiera saber cómo funciona el acompañamiento virtual."
+        type="button"
+      >
         Acompañamiento virtual
-
       </button>
-</div>
-<button class="wa-plan-cta" data-modal="survey" type="button"><span><strong>ENCUENTRA TU PLAN</strong><small>Responde unas preguntas y descubre tu punto de partida.</small></span><span aria-hidden="true"></span></button>
-<button class="wa-faq-link" data-modal="faq" type="button">VER TODAS LAS PREGUNTAS FRECUENTES </button>
-<form class="wa-form" id="waForm">
-<label for="waInput">TU MENSAJE</label>
-<textarea id="waInput" maxlength="1000" placeholder="Escribe tu duda aquí..." required="" rows="3"></textarea>
-<button class="wa-send" type="submit">
 
+    </div>
+
+    <button
+      class="wa-plan-cta"
+      data-modal="survey"
+      type="button"
+    >
+      <span>
+        <strong>ENCUENTRA TU PLAN</strong>
+
+        <small>
+          Responde unas preguntas y descubre
+          tu punto de partida.
+        </small>
+      </span>
+
+      <span aria-hidden="true"></span>
+    </button>
+
+    <button
+      class="wa-faq-link"
+      data-modal="faq"
+      type="button"
+    >
+      ▶ VER TODAS LAS PREGUNTAS FRECUENTES
+    </button>
+
+    <form class="wa-form" id="waForm">
+
+      <label for="waInput">
+        TU MENSAJE
+      </label>
+
+      <textarea
+        id="waInput"
+        maxlength="1000"
+        placeholder="Escribe tu duda aquí..."
+        required
+        rows="3"
+      ></textarea>
+
+      <button
+        class="wa-send"
+        type="submit"
+      >
         CONTINUAR
 
         <span aria-hidden="true"></span>
-</button>
-</form>
-<p class="wa-note">
+      </button>
 
+    </form>
+
+    <p class="wa-note">
       Tu mensaje se abrirá en WhatsApp
-
       para que confirmes el envío.
-
     </p>
-</div>
+
+  </div>
 </section>
+
+
+<!-- =====================================
+     JAVASCRIPT · DUDAS
+===================================== -->
+
 <script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const chat=document.getElementById('waChat');
-  const toggle=document.getElementById('waToggle');
-  const close=document.getElementById('waClose');
-  const input=document.getElementById('waInput');
-  const form=document.getElementById('waForm');
-  const openChat=(open,focus=true)=>{chat.hidden=!open;toggle.setAttribute('aria-expanded',String(open));if(focus)(open?input:toggle).focus();};
-  toggle.addEventListener('click',()=>openChat(chat.hidden));
-  close.addEventListener('click',()=>openChat(false));
-  document.querySelectorAll('[data-open-dudas]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('nav')?.classList.remove('open');document.getElementById('menuToggle')?.setAttribute('aria-expanded','false');openChat(true);}));
-  document.querySelectorAll('[data-wa-question]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.waQuestion||'';input.focus();}));
-  form.addEventListener('submit',e=>{e.preventDefault();const msg=input.value.trim();if(msg)window.open('https://wa.me/525612584271?text='+encodeURIComponent('Hola Coach Alan, '+msg),'_blank','noopener,noreferrer');});
-  document.addEventListener('click',e=>{
-    const flipButton=e.target.closest('[data-flip]');
-    if(flipButton){
-      const card=flipButton.closest('.swim-flip');if(!card)return;
-      const flipped=card.classList.toggle('is-flipped');
-      const front=card.querySelector('.swim-front'),back=card.querySelector('.swim-back');
-      front.inert=flipped;back.inert=!flipped;
-      const target=flipped?back:front;
-      target.querySelector('[data-flip]')?.focus({preventScroll:true});
+document.addEventListener('DOMContentLoaded', () => {
+
+  const chat = document.getElementById('waChat');
+  const toggle = document.getElementById('waToggle');
+  const close = document.getElementById('waClose');
+
+  const input = document.getElementById('waInput');
+  const form = document.getElementById('waForm');
+
+
+  /* =====================================
+     ABRIR / CERRAR CHAT
+     SIN ACTIVAR TECLADO EN MÓVIL
+  ===================================== */
+
+  const openChat = (open, focus = true) => {
+
+    chat.hidden = !open;
+
+    toggle.setAttribute(
+      'aria-expanded',
+      String(open)
+    );
+
+    // No enfocar el textarea al abrir.
+    // Esto evita activar el teclado móvil.
+
+    if (focus && !open) {
+      toggle.focus({
+        preventScroll: true
+      });
     }
-    if(e.target.closest('[data-modal]')&& !chat.hidden)openChat(false,false);
+
+  };
+
+
+  /* =====================================
+     BOTÓN FLOTANTE
+  ===================================== */
+
+  toggle.addEventListener('click', () => {
+
+    openChat(chat.hidden);
+
   });
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!chat.hidden)openChat(false);});
+
+
+  /* =====================================
+     CERRAR CHAT
+  ===================================== */
+
+  close.addEventListener('click', () => {
+
+    openChat(false);
+
+  });
+
+
+  /* =====================================
+     ABRIR DUDAS DESDE OTROS BOTONES
+  ===================================== */
+
+  document
+    .querySelectorAll('[data-open-dudas]')
+    .forEach(button => {
+
+      button.addEventListener('click', () => {
+
+        document.getElementById('nav')
+          ?.classList.remove('open');
+
+        document.getElementById('menuToggle')
+          ?.setAttribute('aria-expanded', 'false');
+
+        openChat(true);
+
+      });
+
+    });
+
+
+  /* =====================================
+     PREGUNTAS RÁPIDAS
+     SIN ABRIR EL TECLADO
+  ===================================== */
+
+  document
+    .querySelectorAll('[data-wa-question]')
+    .forEach(button => {
+
+      button.addEventListener('click', () => {
+
+        input.value =
+          button.dataset.waQuestion || '';
+
+        // No usamos input.focus().
+        // El mensaje se coloca sin abrir teclado.
+
+      });
+
+    });
+
+
+  /* =====================================
+     ENVIAR MENSAJE A WHATSAPP
+  ===================================== */
+
+  form.addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    const msg = input.value.trim();
+
+    if (msg) {
+
+      window.open(
+        'https://wa.me/525612584271?text=' +
+        encodeURIComponent(
+          'Hola Coach Alan, ' + msg
+        ),
+        '_blank',
+        'noopener,noreferrer'
+      );
+
+    }
+
+  });
+
+
+  /* =====================================
+     TARJETAS GIRATORIAS
+     SE CONSERVA SU FUNCIONAMIENTO
+  ===================================== */
+
+  document.addEventListener('click', e => {
+
+    const flipButton =
+      e.target.closest('[data-flip]');
+
+    if (flipButton) {
+
+      const card =
+        flipButton.closest('.swim-flip');
+
+      if (!card) return;
+
+      const flipped =
+        card.classList.toggle('is-flipped');
+
+      const front =
+        card.querySelector('.swim-front');
+
+      const back =
+        card.querySelector('.swim-back');
+
+      front.inert = flipped;
+      back.inert = !flipped;
+
+      const target =
+        flipped ? back : front;
+
+      target
+        .querySelector('[data-flip]')
+        ?.focus({
+          preventScroll: true
+        });
+
+    }
+
+
+    /* =====================================
+       CERRAR CHAT AL ABRIR MODALES
+    ===================================== */
+
+    if (
+      e.target.closest('[data-modal]') &&
+      !chat.hidden
+    ) {
+
+      openChat(false, false);
+
+    }
+
+  });
+
+
+  /* =====================================
+     CERRAR CON ESCAPE
+  ===================================== */
+
+  document.addEventListener('keydown', e => {
+
+    if (
+      e.key === 'Escape' &&
+      !chat.hidden
+    ) {
+
+      openChat(false);
+
+    }
+
+  });
+
 });
 </script>
+
 </body>
 </html>
